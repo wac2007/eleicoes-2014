@@ -1,15 +1,12 @@
-import * as Router from 'koa-router';
+import Router from 'koa-router';
+import electionsRouter from './elections/router';
 
-const router = new Router();
+const baseRouter = new Router();
 
-/**
- * Base route, return a 401
- */
-router.get('/', async (ctx) => { ctx.status = 401; });
+// Use Elections
+baseRouter.use(electionsRouter.routes(), electionsRouter.allowedMethods());
 
-/**
- * Basic healthcheck
- */
-router.get('/healthcheck', async (ctx) => { ctx.body = 'OK'; });
+// Basic healthcheck
+baseRouter.get('/', async (ctx) => { ctx.body = 'OK'; });
 
-export default router.routes();
+export default baseRouter.routes();

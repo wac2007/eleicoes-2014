@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES6",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "moduleResolution": "Node",
+    "lib": ["ES6", "ES5", "ESNext"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "types": ["mocha"],
+  "include": ["app/**/*.ts", "app/**/*.js"],
+  "exclude": ["node_modules", "dist"]
+}

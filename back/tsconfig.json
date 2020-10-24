@@ -8,7 +8,9 @@
     "moduleResolution": "Node",
     "lib": ["ES6", "ES5", "ESNext"],
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "types": ["mocha"],
   "include": ["app/**/*.ts", "app/**/*.js"],

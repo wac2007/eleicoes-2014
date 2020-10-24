@@ -1,0 +1,35 @@
+[
+  [
+    "UF",
+    "AC",
+    "Acre",
+    "AC",
+    ["PSB", "Marina Silva", 167603, 41.99, "N"],
+    ["PSDB", "Aécio Neves", 116109, 29.09, "N"],
+    ["PT", "Dilma", 2, 27.97, "N"],
+    ["PT", "Outro", 3, 27.97, "N"]
+  ],
+  [
+    "Rio Branco",
+    "1200401",
+    "MU",
+    "01392",
+    "Acre",
+    "AC",
+    ["PRTB", "Levy Fidelix", 332, 0.17, "N"],
+    ["PSDC", "Eymael", 155, 0.08, "N"],
+    ["PSDC", "Joao", 10, 0.08, "N"],
+    ["PT", "Maria", 10, 0.08, "N"]
+  ],
+  [
+    "Cabeceiras",
+    "5204003",
+    "MU",
+    "92797",
+    "Goiás",
+    "GO",
+    ["PSB", "Marina Silva", 521, 11.36, "N"],
+    ["PRTB", "Levy Fidelix", 20, 0.44, "N"],
+    ["PSDC", "Eymael", 2, 0.04, "N"]
+  ]
+]

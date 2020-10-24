@@ -9,14 +9,12 @@ describe('ParseVotes', () => {
       PRTB: {
         AC: {
           name: 'Acre',
-          total: 332,
           votes: {
             1200401: 332,
           },
         },
         GO: {
           name: 'Goiás',
-          total: 20,
           votes: {
             5204003: 20,
           },
@@ -25,14 +23,12 @@ describe('ParseVotes', () => {
       PSDC: {
         AC: {
           name: 'Acre',
-          total: 165,
           votes: {
             1200401: 165,
           },
         },
         GO: {
           name: 'Goiás',
-          total: 2,
           votes: {
             5204003: 2,
           },
@@ -41,7 +37,6 @@ describe('ParseVotes', () => {
       PT: {
         AC: {
           name: 'Acre',
-          total: 10,
           votes: {
             1200401: 10,
           },
@@ -50,7 +45,6 @@ describe('ParseVotes', () => {
       PSB: {
         GO: {
           name: 'Goiás',
-          total: 521,
           votes: {
             5204003: 521,
           },

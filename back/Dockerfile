@@ -1,9 +1,13 @@
-FROM node:8.4
+FROM node:12.18.4
 
 WORKDIR /server
 
-COPY . /server
-RUN npm install
+COPY ./package.json /server
+COPY ./yarn.lock /server
+RUN yarn install
 
-EXPOSE 3000
-CMD [ "npm", "start" ]
+COPY . /server
+RUN yarn build
+
+EXPOSE 4000
+CMD [ "yarn", "start" ]

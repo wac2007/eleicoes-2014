@@ -18,7 +18,7 @@ interface StateResponse {
 
 class IBGEClient {
   getCountryMesh = async () => {
-    const request = await axios.get(`${IBGEMeshApi}${format}`);
+    const request = await axios.get(`${IBGEMeshApi}${format}&resolucao=2`);
     return request.data;
   }
 

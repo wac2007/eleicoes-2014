@@ -11,8 +11,8 @@ export interface VoteStructure {
   }
 }
 
-// type JSONitem = Array<string | number | Array<string | number>>;
 export type VoteCell = [string, string, number, number, string];
+
 export type JSONitem =
   [string, string, string, string, VoteCell[]] |
   [string, string, string, string, string, string, ...VoteCell[]];

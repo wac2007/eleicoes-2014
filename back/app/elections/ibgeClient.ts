@@ -23,7 +23,7 @@ class IBGEClient {
   }
 
   getStateMesh = async (stateID: number) => {
-    const request = await axios.get(`${IBGEMeshApi}/${stateID}${format}`);
+    const request = await axios.get(`${IBGEMeshApi}/${stateID}${format}&resolucao=5`);
     return request.data;
   }
 

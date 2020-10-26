@@ -1,4 +1,8 @@
-import { VotesByPartyState } from '../../../back/app/elections/routes/states';
+export interface VotesByPartyState {
+  [party: string]: {
+    [stateUF: string]: number;
+  }
+}
 
 interface StatesResponse {
   votes: VotesByPartyState;

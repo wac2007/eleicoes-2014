@@ -2,7 +2,7 @@ version: "3.8"
 services:
   api:
     build: ./back
-    ports:
-      - "4000:4000"
-    # links:
-    #   - front
+    network_mode: "host"
+  front:
+    build: ./front
+    network_mode: "host"

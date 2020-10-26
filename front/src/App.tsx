@@ -20,7 +20,7 @@ interface State {
   votes?: VotesByPartyState;
 }
 
-class App extends Component<{}, State> {
+class App extends Component<unknown, State> {
   private backend = new BackendClient();
 
   private ibgeClient = new IBGEClient();

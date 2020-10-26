@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-import BackendClient from './libs/backend';
+import BackendClient, { VotesByPartyState } from './libs/backend';
 import BrazilMap from './components/BrazilMap';
 import './App.scss';
 import IBGEClient, { StateResponse } from './libs/ibgeClient';
 import StateSelector from './components/StateSelector';
 import PartySelector from './components/PartySelector';
-import { VotesByPartyState } from '../../back/app/elections/routes/states';
 
 interface State {
   geo: any;
@@ -18,6 +18,7 @@ interface State {
   selectedState: number;
 
   votes?: VotesByPartyState;
+  isLoading: boolean;
 }
 
 class App extends Component<unknown, State> {
@@ -31,6 +32,7 @@ class App extends Component<unknown, State> {
       geo: '',
       selectedParty: '',
       selectedState: -1,
+      isLoading: true,
     };
   }
 
@@ -45,6 +47,7 @@ class App extends Component<unknown, State> {
       stateList: states,
       partyList: Object.keys(response.votes),
       votes: response.votes,
+      isLoading: false,
     }));
   }
 
@@ -105,6 +108,21 @@ class App extends Component<unknown, State> {
           }
         </div>
         <div>
+          {
+            this.state.isLoading && (
+              <CircularProgress />
+            )
+          }
+          {
+            !this.state.selectedParty && (
+              <p>Selecione um partido para continuar.</p>
+            )
+          }
+          {
+            this.state.selectedParty && !this.state.geo && (
+              <p>Ocorreu um erro ao buscar os dados.</p>
+            )
+          }
           {
             this.state.geo
             && this.state.selectedParty

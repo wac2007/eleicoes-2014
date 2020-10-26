@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// Materialize-css
+@import "~materialize-css/sass/components/color-variables";
+@import "~materialize-css/sass/components/color-classes";
+@import "~materialize-css/sass/components/variables";
+
+.App {
+  padding: 20px 4px;
+
+  .selectorGroup {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    
+    .MuiFormControl-root {
+      flex: 1 1 auto;
+      margin: 0 4px;
+
+      @media #{$medium-and-up} {
+        // max-width: 40px;
+        flex: 0 1 auto;
+        width: 180px;
+      }
+    }
+    .MuiSelect-select.MuiSelect-select {
+      width: 100%;
+    }
+  }
+
+  .MuiTypography-root.title {
+    font-size: 32px;
+    text-align: center;
+    margin: 0 auto 16px;
+  }
+
+  .leaflet-container {
+    height: 600px;
+    width: 100%;
+  }
+}
+
+

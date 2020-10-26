@@ -34,4 +34,4 @@ Obs: Existe um bug nos dados em que aparece uma chave como `PSDB,Aécio Neves,34
 
 ## Possíveis melhorias
 - Ao invés do cache ficar em memória, seria interessante colocar um redis (em um sistema de produção, por exemplo).
-  
+- Pasta compartilhada para os tipos das aplicações (principalmente respostas da api)
